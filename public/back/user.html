@@ -14,10 +14,10 @@
 <div class="lt_aside">
 
     <div class="brand">
-        <a href="index.html">youyou乐淘商城</a>
+        <a href="index.html">黑马14期</a>
     </div>
     <div class="user">
-        <img src="images/1.jpg" alt="">
+        <img src="images/default.jpg" alt="">
         <p>超级管理员</p>
     </div>
     <div class="nav">
@@ -132,7 +132,8 @@
         <td>{{v.username}}</td>
         <td>{{v.mobile}}</td>
         <td>{{v.isDelete===1?"正常":"禁用"}}</td>
-        <td>
+        <!--把这个用户的id和删除状态存储在了标签上-->
+        <td data-id="{{v.id}}" data-is-delete="{{v.isDelete}}">
             {{if v.isDelete===1}}
             <button class="btn btn-sm btn-danger">禁用</button>
             {{/if}}
