@@ -1,7 +1,16 @@
 /**
- * Created by Administrator on 2017/10/31.
+ * Created by HUCC on 2017/10/29.
  */
-$(function(){
+
+$(function () {
+
+    //表单校验功能
+    //1. 用户名不能为空
+    //2. 用户密码不能为空
+    //3. 用户密码必须是6-12位
+
+
+    //1. 初始化表单校验插件
     var $form = $("#form");
     $form.bootstrapValidator({
 
@@ -42,7 +51,10 @@ $(function(){
             }
         }
     });
+
+    //表单校验初始化后，就会有一个校验实例
     var validator = $form.data("bootstrapValidator");
+
 
     //2. 给表单注册一个校验成功的事件
     $form.on("success.form.bv", function (e) {
@@ -88,5 +100,7 @@ $(function(){
         ///获取到表单校验实例，调用了resetForm方法，重置表单。
         validator.resetForm();
     })
+
+
 
 });
