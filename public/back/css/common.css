@@ -76,3 +76,22 @@ a:link, a:visited, a:hover, a:active {
     border-left-color: #367fa9;
     color: #fff;
 }
+.lt_main {
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt_main.now {
+    padding-left: 0;
+}
+.lt_header {
+    height: 50px;
+    line-height: 50px;
+    background-color: #3c8dbc;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.lt_header a {
+    color: #fff;
+    font-size: 16px;
+}
