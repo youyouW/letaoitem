@@ -31,7 +31,7 @@ $(function () {
                         currentPage = page;
                         render();
                     }
-                    })
+                });
 
             }
         })
