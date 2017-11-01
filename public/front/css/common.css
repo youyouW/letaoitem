@@ -2,6 +2,7 @@
 
 html,body{
     height: 100%;
+
 }
 
 * {
@@ -20,7 +21,7 @@ img {
     height: 100%;
     max-width: 640px;
     min-width: 320px;
-    background-color: pink;
+    /*background-color: pink;*/
     margin: 0 auto;
     padding-top: 45px;
     padding-bottom: 55px;
