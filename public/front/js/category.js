@@ -1,6 +1,4 @@
-/**
- * Created by HUCC on 2017/11/1.
- */
+
 //开启左侧的区域滚动
 var sc = mui('.mui-scroll-wrapper').scroll({
     deceleration: 0.0005,

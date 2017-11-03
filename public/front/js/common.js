@@ -1,6 +1,3 @@
-/**
- * Created by HUCC on 2017/11/2.
- */
 
 //tools中放了常用的一些方法
 var tools = {
