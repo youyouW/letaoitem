@@ -1,7 +1,6 @@
 /**
- * Created by HUCC on 2017/10/31.
+ * Created by Administrator on 2017/10/31.
  */
-
 $(function () {
 
 

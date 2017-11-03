@@ -1,7 +1,6 @@
 /**
- * Created by HUCC on 2017/10/29.
+ * Created by Administrator on 2017/10/29.
  */
-
 $(function () {
 
     var myChart = echarts.init(document.querySelector(".pic_left"));
