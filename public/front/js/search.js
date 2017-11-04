@@ -30,12 +30,13 @@ $(".lt_history").on("click", ".icon_empty", function () {
 // });
 
 
-$("lt_history").on.("click", "fa-close", function () {
+$(".lt_history").on("click", "fa-close", function () {
     var btnArray = ["是", "否"];
+    var $this = $(this);
     mui.confirm("你确定要删除这条记录吗", "警告", btnArray, function (data) {
         if (data.index == 0) {
             var arr = getHistory();
-            var index = $(this).data("index");
+            var index = $this.data("index");
             arr.splice(index, 1);
             localStorage.setItem("lt_search_history", JSON.stringify(arr));
             render();

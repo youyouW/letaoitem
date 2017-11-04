@@ -31,6 +31,40 @@ $(function () {
             mui(".mui-numbox").numbox();
         }
     });
+    
+    //尺码选择功能
+    $(".mui-scroll").on("click", ".size", function(){
+        $(this).addClass("now").siblings().removeClass("now");
+    });
+    
+    //添加购物车功能
+    $(".btn_add_cart").on("click",function () {
+        var size = $(".size.now").html();
+        var num = $(".mui-numbox-input").val();
+        if(!size){
+            mui.toast("请选择尺码");
+            return;
+        }
+
+        $.ajax({
+            type:"post",
+            url:"/cart/addCart",
+            data:{
+                productId:id,
+                num:num,
+                size:size
+            },
+            success:function (data) {
+                if(data.successs){
+                    mui.toast("添加成功了");
+                }
+                if (data.error === 400){
+                    location.href = "login.html?retUrl="+location.href;
+
+                }
+            }
+        });
+    })
 })
 
 
@@ -73,5 +107,7 @@ $(function () {
 //
 //         }
 //     });
+
+
 //
 // })
