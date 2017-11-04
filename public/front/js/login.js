@@ -19,7 +19,7 @@ $(function () {
             type:"post",
             url:"/user/login",
             data:{
-                username:usernamae,
+                username:username,
                 password:password
             },
             success:function (data) {

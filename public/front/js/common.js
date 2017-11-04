@@ -17,6 +17,11 @@
     },
     getParam:function (key) {
         return this.getParamObj()[key];
+    },
+    checkLohin:function(data){
+        if (data.error == 400){
+            location.href = "login.html?retUrl="+location.href;
+        }
     }
 }
 // var tools = {
