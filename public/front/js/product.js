@@ -5,6 +5,7 @@ $(function () {
     mui(".mui-scroll-wrapper").scroll({
         indicators:false
     })
+    //首先，获取到id
     var id = tools.getParam("productId");
     $.ajax({
         type:"get",

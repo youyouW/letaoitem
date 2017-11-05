@@ -36,7 +36,7 @@ $(function () {
     //手机注册功能
     $(".btn_register").on("click", function () {
 
-        //获取所有的数据
+        //获取8所有的数据
         var username = $("[name='username']").val();
         var password = $("[name='password']").val();
         var repassword = $("[name='repassword']").val();
@@ -86,7 +86,7 @@ $(function () {
         //发送ajax请求
         $.ajax({
         type:"post",
-            url:"user/register",
+            url:"/user/register",
             data:{
                 username:username,
                 password:password,
@@ -96,7 +96,8 @@ $(function () {
                if(data.success){
                    mui.toast("登录成功，即将跳转到登陆页");
                    setTimeout(function () {
-                       location.herf = "login.html";
+                       // console.log(11);
+                       location.href = "login.html";
                    },1000);
                } else {
                    mui.toast(data.message);

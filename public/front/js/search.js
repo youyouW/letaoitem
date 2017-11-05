@@ -7,6 +7,7 @@
 mui(".mui-scroll-wrapper").scroll({
     indicators:false
 });
+//获取缓存中的数据，转换成数组，返回
 function  getHistory(){
     var search_history = localStorage.getItem("lt_search_history") || "[]";
     var arr = JSON.parse(search_history);
@@ -15,11 +16,11 @@ function  getHistory(){
 }
 function render() {
     var arr = getHistory();
-    $(".LT_HISTORY").html(template("tpl", {arr: arr}));
+    $(".lt_history").html(template("tpl", {arr: arr}));
 
 }
 render();
-
+//清空功能
 $(".lt_history").on("click", ".icon_empty", function () {
    localStorage.removeItem("lt_search_history");
     render();
@@ -30,7 +31,8 @@ $(".lt_history").on("click", ".icon_empty", function () {
 // });
 
 
-$(".lt_history").on("click", "fa-close", function () {
+$(".lt_history").on("click", ".fa-close", function () {
+
     var btnArray = ["是", "否"];
     var $this = $(this);
     mui.confirm("你确定要删除这条记录吗", "警告", btnArray, function (data) {

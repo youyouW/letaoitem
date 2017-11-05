@@ -5,11 +5,10 @@ $(function () {
     //1.渲染个人中心
     $.ajax({
         type:"get",
-        urll:"user/queryUserMessage",
+        url:"/user/queryUserMessage",
         success:function (data) {
             tools.checkLogin(data);
-            $(".userinfo").html(template("tpl",data));
-            
+            $(".userinfo").html( template("tpl", data) );
         }
     });
     

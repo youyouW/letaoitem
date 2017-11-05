@@ -17,7 +17,7 @@ $(function () {
                             //获取数据花了1秒钟
                             setTimeout(function () {
                                 console.log(data);
-                                tools.checkLohin(data);
+                                tools.checkLogin(data);
                                 //渲染购物车
                                 $("#OA_task_2").html(template("tpl", {data: data}));
                                 mui(".mui-scroll-wrapper").pullRefresh().endPulldownToRefresh();
@@ -45,7 +45,7 @@ $(function () {
                     id:[id]//id必须是一个数组
                 },
                 success:function (data) {
-                    tools.checkLohin(data);
+                    tools.checkLogin(data);
                     if(data.success){
                         mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();
                     }
@@ -77,7 +77,7 @@ $("#OA_task_2").on("tap",".btn_edit",function () {
                },
                success:function (data) {
                    //校验是否登录
-                   tools.checkLohin(data);
+                   tools.checkLogin(data);
                    if(data.success){
                        //如果成功，重新下拉一次
                        mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();
@@ -109,6 +109,7 @@ $("#OA_task_2").on("tap",".btn_edit",function () {
         $(":checked").each(function (i,e) {
             total += $(this).data("num") * $(this).data("price");
         });
-        $(".lt_total span").html(total);
+        $(".lt_total span").html(total.toFixed(2));
+        // $(".lt_total span").html(total);
     });
 });
